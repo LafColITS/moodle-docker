@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
+export MOODLE_DOCKER_WWWROOT=./moodle
+export MOODLE_DOCKER_DB=mariadb
+
 if [ ! -d "$MOODLE_DOCKER_WWWROOT" ];
 then
     echo 'Error: $MOODLE_DOCKER_WWWROOT is not set or not an existing directory'
@@ -26,7 +29,7 @@ export ASSETDIR="${basedir}/assets"
 
 
 dockercompose="docker-compose -f ${basedir}/base.yml"
-dockercompose="${dockercompose} -f ${basedir}/service.mail.yml"
+# dockercompose="${dockercompose} -f ${basedir}/service.mail.yml"
 
 # PHP Version.
 export MOODLE_DOCKER_PHP_VERSION=${MOODLE_DOCKER_PHP_VERSION:-7.1}

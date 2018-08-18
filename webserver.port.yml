@@ -1,7 +1,8 @@
 version: "2"
 services:
-  webserver:
+  phpfpm:
     environment:
       MOODLE_DOCKER_WEB_PORT: "${MOODLE_DOCKER_WEB_PORT}"
+  apache:
     ports:
       - "${MOODLE_DOCKER_WEB_PORT}:80"

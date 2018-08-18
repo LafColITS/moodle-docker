@@ -1,6 +1,6 @@
 version: "2"
 services:
-  webserver:
+  phpfpm:
     environment:
       MOODLE_DOCKER_BROWSER: chrome
   selenium:

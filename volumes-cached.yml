@@ -2,6 +2,9 @@
 # for improved performance on mac
 version: "2"
 services:
-  webserver:
+  phpfpm:
+    volumes:
+        - "${MOODLE_DOCKER_WWWROOT}:/var/www/html:cached"
+  apache:
     volumes:
         - "${MOODLE_DOCKER_WWWROOT}:/var/www/html:cached"

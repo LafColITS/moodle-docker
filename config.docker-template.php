@@ -40,7 +40,7 @@ $CFG->phpunit_dataroot  = '/var/www/phpunitdata';
 $CFG->phpunit_prefix = 't_';
 define('TEST_EXTERNAL_FILES_HTTP_URL', 'http://exttests');
 
-$CFG->behat_wwwroot   = 'http://webserver';
+$CFG->behat_wwwroot   = 'http://apache';
 $CFG->behat_dataroot  = '/var/www/behatdata';
 $CFG->behat_prefix = 'b_';
 $CFG->behat_profiles = array(

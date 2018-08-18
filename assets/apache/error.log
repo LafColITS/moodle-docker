@@ -1,0 +1,87 @@
+[Sat Aug 18 20:17:10.437857 2018] [so:warn] [pid 10:tid 140272228345024] AH01574: module proxy_module is already loaded, skipping
+[Sat Aug 18 20:17:10.437884 2018] [so:warn] [pid 10:tid 140272228345024] AH01574: module proxy_fcgi_module is already loaded, skipping
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.128.7. Set the 'ServerName' directive globally to suppress this message
+[Sat Aug 18 20:17:10.439378 2018] [mpm_event:notice] [pid 10:tid 140272228345024] AH00489: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Sat Aug 18 20:17:10.439396 2018] [core:notice] [pid 10:tid 140272228345024] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Sat Aug 18 20:19:07.656503 2018] [so:warn] [pid 11:tid 140138356274368] AH01574: module proxy_module is already loaded, skipping
+[Sat Aug 18 20:19:07.656522 2018] [so:warn] [pid 11:tid 140138356274368] AH01574: module proxy_fcgi_module is already loaded, skipping
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.128.7. Set the 'ServerName' directive globally to suppress this message
+[Sat Aug 18 20:19:07.657287 2018] [core:warn] [pid 11:tid 140138356274368] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Aug 18 20:19:07.657966 2018] [mpm_event:notice] [pid 11:tid 140138356274368] AH00489: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Sat Aug 18 20:19:07.657983 2018] [core:notice] [pid 11:tid 140138356274368] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Sat Aug 18 20:20:40.148915 2018] [so:warn] [pid 10:tid 140118312187072] AH01574: module proxy_module is already loaded, skipping
+[Sat Aug 18 20:20:40.148955 2018] [so:warn] [pid 10:tid 140118312187072] AH01574: module proxy_fcgi_module is already loaded, skipping
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.128.7. Set the 'ServerName' directive globally to suppress this message
+[Sat Aug 18 20:20:40.150449 2018] [core:warn] [pid 10:tid 140118312187072] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Aug 18 20:20:40.152070 2018] [mpm_event:notice] [pid 10:tid 140118312187072] AH00489: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Sat Aug 18 20:20:40.152102 2018] [core:notice] [pid 10:tid 140118312187072] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Sat Aug 18 20:20:46.215482 2018] [proxy_fcgi:error] [pid 12:tid 140118140647168] [client 192.168.128.1:43842] AH01071: Got error 'Primary script unknown\n'
+[Sat Aug 18 20:20:47.756973 2018] [proxy_fcgi:error] [pid 12:tid 140118098683648] [client 192.168.128.1:43842] AH01071: Got error 'Primary script unknown\n'
+[Sat Aug 18 20:20:50.517906 2018] [proxy_fcgi:error] [pid 12:tid 140118090290944] [client 192.168.128.1:43842] AH01071: Got error 'Primary script unknown\n'
+[Sat Aug 18 20:21:28.670802 2018] [so:warn] [pid 10:tid 140498041869504] AH01574: module proxy_module is already loaded, skipping
+[Sat Aug 18 20:21:28.670831 2018] [so:warn] [pid 10:tid 140498041869504] AH01574: module proxy_fcgi_module is already loaded, skipping
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.128.7. Set the 'ServerName' directive globally to suppress this message
+[Sat Aug 18 20:21:28.671770 2018] [core:warn] [pid 10:tid 140498041869504] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Aug 18 20:21:28.672471 2018] [mpm_event:notice] [pid 10:tid 140498041869504] AH00489: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Sat Aug 18 20:21:28.672507 2018] [core:notice] [pid 10:tid 140498041869504] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Sat Aug 18 21:43:08.537462 2018] [so:warn] [pid 11:tid 140489319294144] AH01574: module proxy_module is already loaded, skipping
+[Sat Aug 18 21:43:08.537481 2018] [so:warn] [pid 11:tid 140489319294144] AH01574: module proxy_fcgi_module is already loaded, skipping
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.128.7. Set the 'ServerName' directive globally to suppress this message
+[Sat Aug 18 21:43:08.538487 2018] [core:warn] [pid 11:tid 140489319294144] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Aug 18 21:43:08.539195 2018] [mpm_event:notice] [pid 11:tid 140489319294144] AH00489: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Sat Aug 18 21:43:08.539214 2018] [core:notice] [pid 11:tid 140489319294144] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Sat Aug 18 21:43:19.217556 2018] [proxy:error] [pid 13:tid 140489224840960] (111)Connection refused: AH00957: FCGI: attempt to connect to 127.0.0.1:9000 (*) failed
+[Sat Aug 18 21:43:19.217621 2018] [proxy_fcgi:error] [pid 13:tid 140489224840960] [client 192.168.128.1:49010] AH01079: failed to make connection to backend: 127.0.0.1
+[Sat Aug 18 21:43:22.878276 2018] [proxy:error] [pid 12:tid 140489216448256] (111)Connection refused: AH00957: FCGI: attempt to connect to 127.0.0.1:9000 (*) failed
+[Sat Aug 18 21:43:22.878383 2018] [proxy_fcgi:error] [pid 12:tid 140489216448256] [client 192.168.128.1:49016] AH01079: failed to make connection to backend: 127.0.0.1
+[Sat Aug 18 21:43:23.591091 2018] [proxy:error] [pid 12:tid 140489199662848] (111)Connection refused: AH00957: FCGI: attempt to connect to 127.0.0.1:9000 (*) failed
+[Sat Aug 18 21:43:23.591183 2018] [proxy_fcgi:error] [pid 12:tid 140489199662848] [client 192.168.128.1:49054] AH01079: failed to make connection to backend: 127.0.0.1
+[Sat Aug 18 21:43:42.763394 2018] [so:warn] [pid 10:tid 140316705805504] AH01574: module proxy_module is already loaded, skipping
+[Sat Aug 18 21:43:42.763416 2018] [so:warn] [pid 10:tid 140316705805504] AH01574: module proxy_fcgi_module is already loaded, skipping
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.128.7. Set the 'ServerName' directive globally to suppress this message
+[Sat Aug 18 21:43:42.764392 2018] [core:warn] [pid 10:tid 140316705805504] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Aug 18 21:43:42.765108 2018] [mpm_event:notice] [pid 10:tid 140316705805504] AH00489: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Sat Aug 18 21:43:42.765124 2018] [core:notice] [pid 10:tid 140316705805504] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Sat Aug 18 21:49:08.437675 2018] [proxy_fcgi:error] [pid 11:tid 140316413736704] (104)Connection reset by peer: [client 192.168.128.1:52020] AH01074: Failed writing Environment to :8000:
+[Sat Aug 18 21:49:48.646352 2018] [proxy_fcgi:error] [pid 11:tid 140316405344000] (104)Connection reset by peer: [client 192.168.128.1:52358] AH01075: Error dispatching request to :8000: (sending empty stdin)
+[Sat Aug 18 21:49:49.404586 2018] [proxy_fcgi:error] [pid 12:tid 140316455700224] (104)Connection reset by peer: [client 192.168.128.1:52364] AH01074: Failed writing Environment to :8000:
+[Sat Aug 18 21:50:20.807024 2018] [proxy_fcgi:error] [pid 12:tid 140316422129408] (104)Connection reset by peer: [client 192.168.128.1:52638] AH01074: Failed writing Environment to :8000:
+[Sat Aug 18 21:50:21.561506 2018] [proxy_fcgi:error] [pid 12:tid 140316413736704] (104)Connection reset by peer: [client 192.168.128.1:52644] AH01074: Failed writing Environment to :8000:
+[Sat Aug 18 21:55:28.348816 2018] [so:warn] [pid 10:tid 140419818505408] AH01574: module proxy_module is already loaded, skipping
+[Sat Aug 18 21:55:28.348839 2018] [so:warn] [pid 10:tid 140419818505408] AH01574: module proxy_fcgi_module is already loaded, skipping
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.128.7. Set the 'ServerName' directive globally to suppress this message
+[Sat Aug 18 21:55:28.349638 2018] [core:warn] [pid 10:tid 140419818505408] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Aug 18 21:55:28.350317 2018] [mpm_event:notice] [pid 10:tid 140419818505408] AH00489: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Sat Aug 18 21:55:28.350335 2018] [core:notice] [pid 10:tid 140419818505408] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Sat Aug 18 22:09:09.428525 2018] [so:warn] [pid 10:tid 140391259464896] AH01574: module proxy_module is already loaded, skipping
+[Sat Aug 18 22:09:09.428566 2018] [so:warn] [pid 10:tid 140391259464896] AH01574: module proxy_fcgi_module is already loaded, skipping
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.128.7. Set the 'ServerName' directive globally to suppress this message
+[Sat Aug 18 22:09:09.430034 2018] [core:warn] [pid 10:tid 140391259464896] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Aug 18 22:09:09.431090 2018] [mpm_event:notice] [pid 10:tid 140391259464896] AH00489: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Sat Aug 18 22:09:09.431119 2018] [core:notice] [pid 10:tid 140391259464896] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Sat Aug 18 22:16:59.863271 2018] [so:warn] [pid 10:tid 139911108625600] AH01574: module proxy_module is already loaded, skipping
+[Sat Aug 18 22:16:59.863293 2018] [so:warn] [pid 10:tid 139911108625600] AH01574: module proxy_fcgi_module is already loaded, skipping
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.128.7. Set the 'ServerName' directive globally to suppress this message
+[Sat Aug 18 22:16:59.864113 2018] [core:warn] [pid 10:tid 139911108625600] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Aug 18 22:16:59.864859 2018] [mpm_event:notice] [pid 10:tid 139911108625600] AH00489: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Sat Aug 18 22:16:59.864876 2018] [core:notice] [pid 10:tid 139911108625600] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Sat Aug 18 22:18:30.617979 2018] [so:warn] [pid 10:tid 139724645201088] AH01574: module proxy_module is already loaded, skipping
+[Sat Aug 18 22:18:30.618001 2018] [so:warn] [pid 10:tid 139724645201088] AH01574: module proxy_fcgi_module is already loaded, skipping
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.128.7. Set the 'ServerName' directive globally to suppress this message
+[Sat Aug 18 22:18:30.618842 2018] [core:warn] [pid 10:tid 139724645201088] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Aug 18 22:18:30.619660 2018] [mpm_event:notice] [pid 10:tid 139724645201088] AH00489: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Sat Aug 18 22:18:30.619681 2018] [core:notice] [pid 10:tid 139724645201088] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Sat Aug 18 22:19:06.791300 2018] [so:warn] [pid 10:tid 140091486414016] AH01574: module proxy_module is already loaded, skipping
+[Sat Aug 18 22:19:06.791319 2018] [so:warn] [pid 10:tid 140091486414016] AH01574: module proxy_fcgi_module is already loaded, skipping
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.128.7. Set the 'ServerName' directive globally to suppress this message
+[Sat Aug 18 22:19:06.792078 2018] [core:warn] [pid 10:tid 140091486414016] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Aug 18 22:19:06.792716 2018] [mpm_event:notice] [pid 10:tid 140091486414016] AH00489: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Sat Aug 18 22:19:06.792733 2018] [core:notice] [pid 10:tid 140091486414016] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Sat Aug 18 22:19:14.053151 2018] [proxy:error] [pid 11:tid 140091391960832] (111)Connection refused: AH00957: FCGI: attempt to connect to 127.0.0.1:9000 (*) failed
+[Sat Aug 18 22:19:14.053296 2018] [proxy_fcgi:error] [pid 11:tid 140091391960832] [client 192.168.128.1:37812] AH01079: failed to make connection to backend: 127.0.0.1
+[Sat Aug 18 22:19:40.583528 2018] [so:warn] [pid 11:tid 139798761723072] AH01574: module proxy_module is already loaded, skipping
+[Sat Aug 18 22:19:40.583553 2018] [so:warn] [pid 11:tid 139798761723072] AH01574: module proxy_fcgi_module is already loaded, skipping
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.128.7. Set the 'ServerName' directive globally to suppress this message
+[Sat Aug 18 22:19:40.584400 2018] [core:warn] [pid 11:tid 139798761723072] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Aug 18 22:19:40.585088 2018] [mpm_event:notice] [pid 11:tid 139798761723072] AH00489: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Sat Aug 18 22:19:40.585103 2018] [core:notice] [pid 11:tid 139798761723072] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
