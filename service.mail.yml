@@ -2,7 +2,7 @@ version: "2"
 services:
   phpfpm:
     volumes:
-      - "${ASSETDIR}/web/apache2_mailhog.conf:/etc/apache2/conf-enabled/apache2_mailhog.conf"
+      - "${ASSETDIR}/apache/mailhog.conf:/etc/apache2/conf-enabled/apache2_mailhog.conf"
     depends_on:
       - mailhog
   mailhog:

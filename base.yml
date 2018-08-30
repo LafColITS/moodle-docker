@@ -40,7 +40,7 @@ services:
       - mailhog
     volumes:
       - ${MOODLE_DOCKER_WWWROOT}:/var/www/html
-      - ${ASSETDIR}/web/apache2_faildumps.conf:/etc/apache2/conf-enabled/apache2_faildumps.conf
+      - ${ASSETDIR}/apache/faildumps.conf:/etc/apache2/conf-enabled/apache2_faildumps.conf
       - ./assets/php-fpm/php.ini:/usr/local/etc/php/php.ini
       - ./assets/php-fpm/php-error.log:/var/log/php-error.log
       - ./assets/php-fpm/www.conf:/usr/local/etc/php-fpm.d/www.conf
