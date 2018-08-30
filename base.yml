@@ -6,6 +6,7 @@ services:
     volumes:
         - ${MOODLE_DOCKER_WWWROOT}:/var/www/html
         - ./behatfaildumps:/var/www/behatfaildumps
+        - ${ASSETDIR}/apache/faildumps.conf:/etc/apache2/conf-enabled/apache2_faildumps.conf
         - ./assets/apache/vhost.conf:/etc/apache2/sites-available/vhost.conf
         - ./assets/apache/custom.conf:/etc/apache2/conf-enabled/custom.conf
         - ./assets/apache/error.log:/var/log/apache2/error.log
@@ -42,7 +43,6 @@ services:
     volumes:
       - ${MOODLE_DOCKER_WWWROOT}:/var/www/html
       - ./behatfaildumps:/var/www/behatfaildumps
-      - ${ASSETDIR}/apache/faildumps.conf:/etc/apache2/conf-enabled/apache2_faildumps.conf
       - ./assets/php-fpm/php.ini:/usr/local/etc/php/php.ini
       - ./assets/php-fpm/php-error.log:/var/log/php-error.log
       - ./assets/php-fpm/www.conf:/usr/local/etc/php-fpm.d/www.conf
