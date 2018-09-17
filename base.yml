@@ -13,27 +13,6 @@ services:
     depends_on:
       - db
       - mailhog
-    # ports:
-    #     - ${MO}:80
-    # links:
-    #     - phpfpm
-
-  # apache:
-  #   depends_on:
-  #     - phpfpm
-  #   # ports:
-  #     # - "${MOODLE_DOCKER_WEB_PORT}:80"
-  #     # - "443:443"
-  #   image: moodlehq/moodle-php-apache:7.1
-  #   volumes:
-  #     - "${MOODLE_DOCKER_WWWROOT}:/var/www/html"
-  #     # - "./wordpress:/var/www/html"
-  #     - "./assets/web/custom.conf:/etc/apache2/conf-available/custom.conf"
-  #     # - "./assets/certs:/etc/nginx/certs"
-  #     # - "./logs/nginx:/var/log/nginx"
-  #   # command: "a2enconf custom"
-  #   # command: "a2dismod php7"
-  #   restart: always
 
   phpfpm:
     image: zitoa/moodle-php-fpm
@@ -42,12 +21,9 @@ services:
       - mailhog
     volumes:
       - ${MOODLE_DOCKER_WWWROOT}:/var/www/html
-      - ./behatfaildumps:/var/www/behatfaildumps
       - ./assets/php-fpm/php.ini:/usr/local/etc/php/php.ini
       - ./assets/php-fpm/php-error.log:/var/log/php-error.log
       - ./assets/php-fpm/www.conf:/usr/local/etc/php-fpm.d/www.conf
-      # - "./assets/php-fpm/docker-php-ext-xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini"
-      # - ~/.ssh:/root/.ssh
     restart: always
     environment:
       MOODLE_DOCKER_DBTYPE: mariadb
@@ -58,22 +34,6 @@ services:
       MOODLE_DOCKER_WEB_HOST: "${MOODLE_DOCKER_WEB_HOST}"
       MOODLE_DOCKER_DBCOLLATION: utf8mb4_bin
       MOODLE_DOCKER_WEB_PORT: "${MOODLE_DOCKER_WEB_PORT}"
-    # extra_hosts:
-    #   - "docker-local.localhost:172.18.0.1"
-
-  # db:
-  #   image: mariadb:10.2.6
-  #   command: >
-  #             --character-set-server=utf8mb4
-  #             --collation-server=utf8mb4_bin
-  #             --innodb_file_format=barracuda
-  #             --innodb_file_per_table=On
-  #             --innodb_large_prefix=On
-  #   environment:
-  #     MYSQL_ROOT_PASSWORD: moodle
-  #     MYSQL_USER: moodle
-  #     MYSQL_PASSWORD: moodle
-  #     MYSQL_DATABASE: moodle
 
   exttests:
     image: moodlehq/moodle-exttests

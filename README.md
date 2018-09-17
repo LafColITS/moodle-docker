@@ -1,16 +1,19 @@
-# moodle-docker: Docker Containers for Moodle Developers
-[![Build Status](https://travis-ci.org/moodlehq/moodle-docker.svg?branch=master)](https://travis-ci.org/moodlehq/moodle-docker/branches)
+# laf-moodle-docker: Docker Containers for Moodle Developers
+<!-- [![Build Status](https://travis-ci.org/moodlehq/moodle-docker.svg?branch=master)](https://travis-ci.org/moodlehq/moodle-docker/branches) -->
+
+Forked from `moodlehq/moodle-docker`. This is a version of Moodle Docker which uses PHP-FPM instead of `mod_php`.
 
 This repository contains Docker configuration aimed at Moodle developers and testers to easily deploy a testing environment for Moodle.
 
 ## Features:
+* Uses PHP-FPM
 * All supported database servers (PostgreSQL, MySQL, Micosoft SQL Server, Oracle XE)
 * Behat/Selenium configuration for Firefox and Chrome
 * Catch-all smtp server and web interface to messages using [MailHog](https://github.com/mailhog/MailHog/)
 * All PHP Extensions enabled configured for external services (e.g. solr, ldap)
 * All supported PHP versions
 * Zero-configuration approach
-* Backed by [automated tests](https://travis-ci.org/moodlehq/moodle-docker/branches)
+<!-- * Backed by [automated tests](https://travis-ci.org/moodlehq/moodle-docker/branches) -->
 
 ## Prerequisites
 * [Docker](https://docs.docker.com) and [Docker Compose](https://docs.docker.com/compose/) installed
@@ -19,10 +22,6 @@ This repository contains Docker configuration aimed at Moodle developers and tes
 ## Quick start
 
 ```bash
-# Set up path to Moodle code
-export MOODLE_DOCKER_WWWROOT=/path/to/moodle/code
-# Choose a db server (Currently supported: pgsql, mariadb, mysql, mssql, oracle)
-export MOODLE_DOCKER_DB=pgsql
 
 # Ensure customized config.php for the Docker containers is in place
 cp config.docker-template.php $MOODLE_DOCKER_WWWROOT/config.php
