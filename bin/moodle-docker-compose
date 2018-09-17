@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 set -e
 
-export MOODLE_DOCKER_WWWROOT=./moodle
+if [ "$MOODLE_DOCKER_WWWROOT" = '' ];
+then
+  export MOODLE_DOCKER_WWWROOT=./moodle
+fi
+
 export MOODLE_DOCKER_DB=mariadb
 
 if [ ! -e assets/apache/error.log ];
