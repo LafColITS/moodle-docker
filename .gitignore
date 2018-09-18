@@ -6,3 +6,5 @@ assets/php-fpm/php-error.log
 assets/apache/vhost.conf
 assets/php-fpm/php.ini
 assets/php-fpm/www.conf
+
+.moodle-docker-setup-run
