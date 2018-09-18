@@ -1,14 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
-if [ ! -e assets/apache/error.log ];
+if [ ! -e ./.moodle-docker-setup-run ];
 then
-    touch assets/apache/error.log
-fi
-
-if [ ! -e assets/php-fpm/php-error.log ];
-then
-    touch assets/php-fpm/php-error.log
+  ./bin/setup
 fi
 
 if [ ! -d "$MOODLE_DOCKER_WWWROOT" ];
