@@ -1,0 +1,54 @@
+if [ ! -d "$MOODLE_DOCKER_WWWROOT" ];
+then
+    export MOODLE_DOCKER_WWWROOT=./moodle
+fi
+
+if [ -z "$MOODLE_DOCKER_DB" ];
+then
+    export MOODLE_DOCKER_DB=mysql
+fi
+
+## Dist files
+if [ ! -e ./assets/php-fpm/php.ini ];
+then
+  cp ./assets/php-fpm/php.ini.dist ./assets/php-fpm/php.ini
+fi
+
+if [ ! -e ./assets/php-fpm/www.conf ];
+then
+  cp ./assets/php-fpm/www.conf.dist ./assets/php-fpm/www.conf
+fi
+
+if [ ! -e ./assets/apache/vhost.conf ];
+then
+  cp ./assets/apache/vhost.conf.dist ./assets/apache/vhost.conf.dist
+fi
+
+## Error logs (untracked)
+if [ ! -e ./assets/apache/error.log ];
+then
+  touch ./assets/apache/error.log
+fi
+
+if [ ! -e ./assets/php-fpm/php-error.log ];
+then
+  touch ./assets/php-fpm/php-error.log
+fi
+
+## config.php
+if [ ! -e $MOODLE_DOCKER_WWWROOT/config.php ];
+then
+  cp ./config.docker-template.php $MOODLE_DOCKER_WWWROOT/config.php
+fi
+
+CHECK=$(grep '// Moodle Docker Configuration Template File' $MOODLE_DOCKER_WWWROOT)
+if [ "$CHECK" = '' ];
+then
+  cp ./config.docker-template.php $MOODLE_DOCKER_WWWROOT/config.php
+fi
+
+## Mark set up as having run
+if [ ! -e ./.moodle-docker-setup-run ];
+then
+  touch .moodle-docker-setup-run
+fi
