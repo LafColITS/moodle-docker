@@ -25,7 +25,7 @@ services:
       - ${ASSETDIR}/php-fpm/www.conf:/usr/local/etc/php-fpm.d/www.conf
     restart: always
     environment:
-      MOODLE_DOCKER_DBTYPE: ${MOODLE_DOCKER_DBTYPE}
+      MOODLE_DOCKER_DBTYPE: ${MOODLE_DOCKER_DB}
       MOODLE_DOCKER_DBNAME: moodle
       MOODLE_DOCKER_DBUSER: moodle
       MOODLE_DOCKER_DBPASS: moodle
