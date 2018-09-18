@@ -1,6 +1,12 @@
 if [ ! -d "$MOODLE_DOCKER_WWWROOT" ];
 then
+  if [ -d moodle ];
+  then
     export MOODLE_DOCKER_WWWROOT=./moodle
+  else
+    echo 'Error: $MOODLE_DOCKER_WWWROOT is not set or not an existing directory'
+    exit 1
+  fi
 fi
 
 if [ -z "$MOODLE_DOCKER_DB" ];
@@ -21,7 +27,7 @@ fi
 
 if [ ! -e ./assets/apache/vhost.conf ];
 then
-  cp ./assets/apache/vhost.conf.dist ./assets/apache/vhost.conf.dist
+  cp ./assets/apache/vhost.conf.dist ./assets/apache/vhost.conf
 fi
 
 ## Error logs (untracked)
