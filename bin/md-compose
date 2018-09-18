@@ -1,13 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-if [ "$MOODLE_DOCKER_WWWROOT" = '' ];
-then
-  export MOODLE_DOCKER_WWWROOT=./moodle
-fi
-
-export MOODLE_DOCKER_DB=mariadb
-
 if [ ! -e assets/apache/error.log ];
 then
     touch assets/apache/error.log
@@ -20,14 +13,12 @@ fi
 
 if [ ! -d "$MOODLE_DOCKER_WWWROOT" ];
 then
-    echo 'Error: $MOODLE_DOCKER_WWWROOT is not set or not an existing directory'
-    exit 1
+    export MOODLE_DOCKER_WWWROOT=./moodle
 fi
 
 if [ -z "$MOODLE_DOCKER_DB" ];
 then
-    echo 'Error: $MOODLE_DOCKER_DB is not set'
-    exit 1
+    export MOODLE_DOCKER_DB=mysql
 fi
 
 # Nasty portable way to the directory of this script, following symlink,
