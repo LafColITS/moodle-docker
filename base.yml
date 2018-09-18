@@ -8,7 +8,6 @@ services:
         - ./behatfaildumps:/var/www/behatfaildumps
         - ${ASSETDIR}/apache/faildumps.conf:/etc/apache2/conf-enabled/apache2_faildumps.conf
         - ./assets/apache/vhost.conf:/etc/apache2/sites-available/vhost.conf
-        - ./assets/apache/custom.conf:/etc/apache2/conf-enabled/custom.conf
         - ./assets/apache/error.log:/var/log/apache2/error.log
     depends_on:
       - db
