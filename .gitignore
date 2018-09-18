@@ -1,4 +1,4 @@
-moodle*
+/moodle*
 
 assets/apache/error.log
 assets/php-fpm/php-error.log
