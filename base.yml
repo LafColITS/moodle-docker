@@ -9,6 +9,7 @@ services:
         - ${ASSETDIR}/apache/faildumps.conf:/etc/apache2/conf-enabled/apache2_faildumps.conf
         - ${ASSETDIR}/apache/vhost.conf:/etc/apache2/sites-available/vhost.conf
         - ${ASSETDIR}/apache/error.log:/var/log/apache2/error.log
+        - ${ASSETDIR}/behatfaildumps:/var/www/behatfaildumps
     depends_on:
       - db
       - mailhog
@@ -23,6 +24,7 @@ services:
       - ${ASSETDIR}/php-fpm/php.ini:/usr/local/etc/php/php.ini
       - ${ASSETDIR}/php-fpm/php-error.log:/var/log/php-error.log
       - ${ASSETDIR}/php-fpm/www.conf:/usr/local/etc/php-fpm.d/www.conf
+      - ${ASSETDIR}/behatfaildumps:/var/www/behatfaildumps
     restart: always
     environment:
       MOODLE_DOCKER_DBTYPE: ${MOODLE_DOCKER_DB}
