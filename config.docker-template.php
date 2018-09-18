@@ -1,5 +1,7 @@
 <?php  // Moodle configuration file
 
+// Moodle Docker Configuration Template File
+
 unset($CFG);
 global $CFG;
 $CFG = new stdClass();
