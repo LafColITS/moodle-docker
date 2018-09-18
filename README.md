@@ -6,7 +6,7 @@ Forked from `moodlehq/moodle-docker`. This is a version of Moodle Docker which u
 This repository contains Docker configuration aimed at Moodle developers and testers to easily deploy a testing environment for Moodle.
 
 ## Features:
-* Uses PHP-FPM
+* Uses PHP-FPM!
 * All supported database servers (PostgreSQL, MySQL, Micosoft SQL Server, Oracle XE)
 * Behat/Selenium configuration for Firefox and Chrome
 * Catch-all smtp server and web interface to messages using [MailHog](https://github.com/mailhog/MailHog/)
@@ -23,14 +23,11 @@ This repository contains Docker configuration aimed at Moodle developers and tes
 
 ```bash
 
-# Ensure customized config.php for the Docker containers is in place
-cp config.docker-template.php $MOODLE_DOCKER_WWWROOT/config.php
-
 # Start up containers
 bin/md-compose up -d
 
 # Wait for DB to come up (important for oracle/mssql)
-bin/moodle-docker-wait-for-db
+bin/wait-for-db
 
 # Work with the containers (see below)
 # [..]
@@ -38,6 +35,12 @@ bin/moodle-docker-wait-for-db
 # Shut down and destroy containers
 bin/md-compose down
 ```
+
+## Setup Script and Moodle config.php
+
+There is a setup script at `bin/setup`. It is run automatically from `bin/md-compose` the first time, and then it leaves a marker file to tell `md-compose` not to run it again. It takes care of dist file copying and creating the untracked error log files.
+
+It also takes care of `cp`ing `config.docker-template.php` into your Moodle directory. This config file is essential. The script checks the existing `config.php` for the identifying comment `// Moodle Docker Configuration Template File`. So be aware that your config file will be overwritten, and that if you rerun setup, it may be overwritten again.
 
 ## Use containers for running behat tests
 
@@ -140,6 +143,7 @@ is designed to be reusable and you are encouraged to use the docker[-compose] co
 
 The following Moodle customised docker images are close companions of this project:
 
+* [moodle-php-fpm](https://github.com/LafColITS/docker-moodle-php-fpm): Clone of moodle-php-apache, except it uses a PHP-FPM container as base instead.
 * [moodle-php-apache](https://github.com/moodlehq/moodle-php-apache): Apache/PHP Environment preconfigured for all Moodle environments
 * [moodle-db-mssql](https://github.com/moodlehq/moodle-db-mssql): Microsoft SQL Server for Linux configured for Moodle
 * [moodle-db-oracle](https://github.com/moodlehq/moodle-db-oracle): Oracle XE configured for Moodle
