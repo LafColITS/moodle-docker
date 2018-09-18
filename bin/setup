@@ -47,7 +47,7 @@ then
   cp ./config.docker-template.php $MOODLE_DOCKER_WWWROOT/config.php
 fi
 
-CHECK=$(grep '// Moodle Docker Configuration Template File' $MOODLE_DOCKER_WWWROOT)
+CHECK=$(grep '// Moodle Docker Configuration Template File' $MOODLE_DOCKER_WWWROOT/config.php)
 if [ "$CHECK" = '' ];
 then
   cp ./config.docker-template.php $MOODLE_DOCKER_WWWROOT/config.php
