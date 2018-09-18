@@ -27,7 +27,7 @@ This repository contains Docker configuration aimed at Moodle developers and tes
 cp config.docker-template.php $MOODLE_DOCKER_WWWROOT/config.php
 
 # Start up containers
-bin/moodle-docker-compose up -d
+bin/md-compose up -d
 
 # Wait for DB to come up (important for oracle/mssql)
 bin/moodle-docker-wait-for-db
@@ -36,18 +36,18 @@ bin/moodle-docker-wait-for-db
 # [..]
 
 # Shut down and destroy containers
-bin/moodle-docker-compose down
+bin/md-compose down
 ```
 
 ## Use containers for running behat tests
 
 ```bash
 # Initialize behat environment
-bin/moodle-docker-compose exec webserver php admin/tool/behat/cli/init.php
+bin/md-compose exec webserver php admin/tool/behat/cli/init.php
 # [..]
 
 # Run behat tests
-bin/moodle-docker-compose exec webserver php admin/tool/behat/cli/run.php --tags=@auth_manual
+bin/md-compose exec webserver php admin/tool/behat/cli/run.php --tags=@auth_manual
 Running single behat site:
 Moodle 3.4dev (Build: 20171006), 33a3ec7c9378e64c6f15c688a3c68a39114aa29d
 Php: 7.1.9, pgsql: 9.6.5, OS: Linux 4.9.49-moby x86_64
@@ -67,11 +67,11 @@ Notes:
 
 ```bash
 # Initialize phpunit environment
-bin/moodle-docker-compose exec webserver php admin/tool/phpunit/cli/init.php
+bin/md-compose exec webserver php admin/tool/phpunit/cli/init.php
 # [..]
 
 # Run phpunit tests
-bin/moodle-docker-compose exec webserver vendor/bin/phpunit auth_manual_testcase auth/manual/tests/manual_test.php
+bin/md-compose exec webserver vendor/bin/phpunit auth_manual_testcase auth/manual/tests/manual_test.php
 Moodle 3.4dev (Build: 20171006), 33a3ec7c9378e64c6f15c688a3c68a39114aa29d
 Php: 7.1.9, pgsql: 9.6.5, OS: Linux 4.9.49-moby x86_64
 PHPUnit 5.5.7 by Sebastian Bergmann and contributors.
@@ -87,7 +87,7 @@ OK (2 tests, 7 assertions)
 
 ```bash
 # Initialize Moodle database for manual testing
-bin/moodle-docker-compose exec webserver php admin/cli/install_database.php --agree-license --fullname="Docker moodle" --shortname="docker_moodle" --adminpass="test" --adminemail="admin@example.com"
+bin/md-compose exec webserver php admin/cli/install_database.php --agree-license --fullname="Docker moodle" --shortname="docker_moodle" --adminpass="test" --adminemail="admin@example.com"
 ```
 
 Notes:
@@ -105,19 +105,19 @@ For example, if you set `MOODLE_DOCKER_SELENIUM_VNC_PORT` to 5900..
 
 ## Stop and restart containers
 
-`bin/moodle-docker-compose down` which was used above after using the containers stops and destroys the containers. If you want to use your containers continuously for manual testing or development without starting them up from scratch everytime you use them, you can also just stop without destroying them. With this approach, you can restart your containers sometime later, they will keep their data and won't be destroyed completely until you run `bin/moodle-docker-compose down`.
+`bin/md-compose down` which was used above after using the containers stops and destroys the containers. If you want to use your containers continuously for manual testing or development without starting them up from scratch everytime you use them, you can also just stop without destroying them. With this approach, you can restart your containers sometime later, they will keep their data and won't be destroyed completely until you run `bin/md-compose down`.
 
 ```bash
 # Stop containers
-bin/moodle-docker-compose stop
+bin/md-compose stop
 
 # Restart containers
-bin/moodle-docker-compose start
+bin/md-compose start
 ```
 
 ## Environment variables
 
-You can change the configuration of the docker images by setting various environment variables before calling `bin/moodle-docker-compose up`.
+You can change the configuration of the docker images by setting various environment variables before calling `bin/md-compose up`.
 
 | Environment Variable                      | Mandatory | Allowed values                        | Default value | Notes                                                                        |
 |-------------------------------------------|-----------|---------------------------------------|---------------|------------------------------------------------------------------------------|
@@ -132,7 +132,7 @@ You can change the configuration of the docker images by setting various environ
 
 ## Advanced usage
 
-As can be seen in [bin/moodle-docker-compose](https://github.com/moodlehq/moodle-docker/blob/master/bin/moodle-docker-compose),
+As can be seen in [bin/md-compose](https://github.com/moodlehq/moodle-docker/blob/master/bin/md-compose),
 this repo is just a series of docker-compose configurations and light wrapper which make use of companion docker images. Each part
 is designed to be reusable and you are encouraged to use the docker[-compose] commands as needed.
 

@@ -29,4 +29,4 @@ before_script:
 script:
     - tests/test.sh
 after_script:
-    - bin/moodle-docker-compose down
+    - bin/md-compose down
