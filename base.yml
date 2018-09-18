@@ -5,7 +5,6 @@ services:
     image: edyan/apache:2.4
     volumes:
         - ${MOODLE_DOCKER_WWWROOT}:/var/www/html
-        - ./behatfaildumps:/var/www/behatfaildumps
         - ${ASSETDIR}/apache/faildumps.conf:/etc/apache2/conf-enabled/apache2_faildumps.conf
         - ${ASSETDIR}/apache/vhost.conf:/etc/apache2/sites-available/vhost.conf
         - ${ASSETDIR}/apache/error.log:/var/log/apache2/error.log
