@@ -7,8 +7,8 @@ services:
         - ${MOODLE_DOCKER_WWWROOT}:/var/www/html
         - ./behatfaildumps:/var/www/behatfaildumps
         - ${ASSETDIR}/apache/faildumps.conf:/etc/apache2/conf-enabled/apache2_faildumps.conf
-        - ./assets/apache/vhost.conf:/etc/apache2/sites-available/vhost.conf
-        - ./assets/apache/error.log:/var/log/apache2/error.log
+        - ${ASSETDIR}/apache/vhost.conf:/etc/apache2/sites-available/vhost.conf
+        - ${ASSETDIR}/apache/error.log:/var/log/apache2/error.log
     depends_on:
       - db
       - mailhog
@@ -20,9 +20,9 @@ services:
       - mailhog
     volumes:
       - ${MOODLE_DOCKER_WWWROOT}:/var/www/html
-      - ./assets/php-fpm/php.ini:/usr/local/etc/php/php.ini
-      - ./assets/php-fpm/php-error.log:/var/log/php-error.log
-      - ./assets/php-fpm/www.conf:/usr/local/etc/php-fpm.d/www.conf
+      - ${ASSETDIR}/php-fpm/php.ini:/usr/local/etc/php/php.ini
+      - ${ASSETDIR}/php-fpm/php-error.log:/var/log/php-error.log
+      - ${ASSETDIR}/php-fpm/www.conf:/usr/local/etc/php-fpm.d/www.conf
     restart: always
     environment:
       MOODLE_DOCKER_DBTYPE: mariadb
