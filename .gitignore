@@ -2,3 +2,5 @@ moodle*
 
 assets/apache/error.log
 assets/php-fpm/php-error.log
+
+assets/apache/vhost.conf
